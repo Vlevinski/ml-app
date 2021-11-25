@@ -36,10 +36,15 @@ def view_data(x, y):
 
 
 def main():
-    # model
+    # data
     X = set_x()
     Y = set_y()
+    print( "Input data")
+    print("X: ", X)
+    print("Y: ", Y)
+    # model
     mdl = model(X, Y)
+    print("")
     print("Linear_regression \n\t slope: ", mdl.coef_, "\n\t intercept:", mdl.intercept_)
     Y_ = mdl.predict(X)
 

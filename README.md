@@ -21,19 +21,6 @@ Check out the [post](https://scikit-learn.org/stable/modules/linear_model.html).
     $ docker run --name ml-app ml-app:latest
     ```
 
-1. Train the model with random data:
-
-    ```sh
-    $ docker exec -it ml-app python
-
-    ```
-
-1. Test:
-
-    ```sh
-     to be developed
-    ```
-
 ### Without Docker
 
 1. Create and activate a virtual environment:
