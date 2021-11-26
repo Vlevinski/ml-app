@@ -34,7 +34,7 @@ Check out the [post](https://scikit-learn.org/stable/modules/linear_model.html).
        docker exec -it ml-one pwd
        docker ps
        sudo docker cp ml-one:/app/linear_regression.png .
-     '''
+     ```
 4. 
 ### Without Docker
 
