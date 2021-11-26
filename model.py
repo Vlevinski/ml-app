@@ -36,12 +36,12 @@ def view_data(x, y):
 
 
 def main():
-    # data
     X = set_x()
     Y = set_y()
     print( "Input data")
     print("X: ", X)
     print("Y: ", Y)
+    
     # model
     mdl = model(X, Y)
     print("")
