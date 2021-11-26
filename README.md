@@ -15,12 +15,27 @@ Check out the [post](https://scikit-learn.org/stable/modules/linear_model.html).
     $ docker build -t ml-app .
     ```
 
-1. Spin up the container:
+2. Spin up the container with FastAPI:
 
     ```sh
     $ docker run --name ml-app ml-app:latest
     ```
+3. Run ML Linear Regression Model 
 
+     '''sh
+       docker run --name ml-one -e PORT=8008 -p 8008:8008 -d ml-app:latest
+       docker exec -it ml-one python model.py
+       docker exec -it ml-one ls -la
+       ll
+       sudo docker cp ml-app:/linear_regression.png .       
+       mkdir data
+       cd data      
+       sudo docker cp ml-one:/linear_regression.png .
+       docker exec -it ml-one pwd
+       docker ps
+       sudo docker cp ml-one:/app/linear_regression.png .
+     '''
+4. 
 ### Without Docker
 
 1. Create and activate a virtual environment:
@@ -36,10 +51,10 @@ Check out the [post](https://scikit-learn.org/stable/modules/linear_model.html).
     
     ```
 
-1. Run the app:
+1. Run ML Linear Regression Model:
 
     ```sh
-    (venv)$ python ml-app.py
+    (venv)$ python model.py
     ```
 
 1. Test:
