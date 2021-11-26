@@ -22,7 +22,7 @@ Check out the [post](https://scikit-learn.org/stable/modules/linear_model.html).
     ```
 3. Run ML Linear Regression Model 
 
-     '''sh
+     ```sh
        docker run --name ml-one -e PORT=8008 -p 8008:8008 -d ml-app:latest
        docker exec -it ml-one python model.py
        docker exec -it ml-one ls -la
