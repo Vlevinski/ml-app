@@ -25,4 +25,3 @@ def read_root():
 @app.get("/pong")
 def root_read():
     return {"pong": "ping"}
-
