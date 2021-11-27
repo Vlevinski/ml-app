@@ -38,7 +38,7 @@ def view_data(x, y):
 def main():
     X = set_x()
     Y = set_y()
-    print( "Input data")
+    print("Input data")
     print("X: ", X)
     print("Y: ", Y)
     
