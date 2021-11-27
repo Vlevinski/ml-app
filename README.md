@@ -1,5 +1,5 @@
 # Deploying a Machine Learning Linear Regression Model
-
+                          
 ## Want to learn how to build this?
 
 Check out the [post](https://scikit-learn.org/stable/modules/linear_model.html).
@@ -35,7 +35,7 @@ Check out the [post](https://scikit-learn.org/stable/modules/linear_model.html).
        docker ps
        sudo docker cp ml-one:/app/linear_regression.png .
      ```
-4. 
+
 ### Without Docker
 
 1. Create and activate a virtual environment:
