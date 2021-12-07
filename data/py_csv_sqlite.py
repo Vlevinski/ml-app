@@ -1,9 +1,4 @@
-"""
-cd Final_Codes
-python csv_to_db.py
-CSV to SQL DB
-"""
-
+#!/usr/bin/python
 import csv
 import sqlite3
 import os
