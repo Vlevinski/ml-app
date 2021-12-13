@@ -12,7 +12,7 @@
     ```
    
 2. CLI commands
-
+      [more](https://stackoverflow.com/questions/33001750/connect-to-mysql-in-a-docker-container-from-the-host) 
     ```sh
     docker network create --driver bridge $DB_DOCKER_NETWORK
     docker run --detach --name=$MYSQL_SERVER_CONTAINER --net=$DB_DOCKER_NETWORK --env="MYSQL_ROOT_PASSWORD=$MYSQL_ROOT_PASSWORD" -p ${MYSQL_PORT}:3306 mysql
@@ -21,7 +21,7 @@
 
     docker run -it -v ${HOST_DATA}:/data --net=$DB_DOCKER_NETWORK --link ${MYSQL_SERVER_CONTAINER}:mysql --rm mysql sh -c "exec mysql -h${DBIP} -uroot -p"
         or
-    mysql -u root -P 3306 -h 172.23.0.2 --protocol=tcp -p  
+    mysql -u root -P${MYSQL_PORT} -h${DBIP} --protocol=tcp -p  
     ```
 3. Stop & clear
  
@@ -29,7 +29,7 @@
    docker ps
    docker stop mysql-db
    docker rm  mysql-db
-   docker network help
+   
    docker network ls
    docker network prune
    docker network rm db-net
